@@ -10,9 +10,26 @@
             FB.init({
               appId      : '446543105502907',
               xfbml      : true,
-              version    : 'v2.2'
+              version    : 'v2.2',
+              status     : true
             });
           };
+            FB.ui({
+                 method: 'share_open_graph',
+                 action_type: 'og.likes',
+                 action_properties: JSON.stringify({
+                  object:'https://developers.facebook.com/docs/',
+                })
+            }, function(response){});
+
+            FB.getLoginStatus(function(response) {
+              if (response.status === 'connected') {
+                console.log('Logged in.');
+              }
+              else {
+                FB.login();
+              }
+            }); 
 
           (function(d, s, id){
              var js, fjs = d.getElementsByTagName(s)[0];
@@ -131,7 +148,15 @@
 
 
 		<!-- something1 -->
-		<div class="box1"></div>
+		<div class="box1">
+            <h1 class="box_title">something1</h1>
+            <div
+              class="fb-like"
+              data-send="true"
+              data-width="450"
+              data-show-faces="true">
+            </div>
+        </div>
 
 		<!-- something2 -->
 		<div class="box2">
