@@ -13,7 +13,7 @@
               version    : 'v2.2',
               status     : true
             });
-          };
+          
             FB.ui({
                  method: 'share_open_graph',
                  action_type: 'og.likes',
@@ -29,7 +29,8 @@
               else {
                 FB.login();
               }
-            }); 
+            });
+            }; 
 
           (function(d, s, id){
              var js, fjs = d.getElementsByTagName(s)[0];
