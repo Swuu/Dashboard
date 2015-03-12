@@ -1,10 +1,18 @@
 <html>
 	<head>
-		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
 		<title> Home Page </title>
+        <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+        <script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
 	</head>
 
 	<body>
+
+    <!-- Firebase -->
+    <script>
+        var myDataRef = new Firebase('http://cmuscheduling.firebaseio.com');
+    </script>
+
+
         <div class="nav">
             <ul>
                 <li><a href="#home">(>^.^)></a></li>
@@ -22,7 +30,7 @@
                         <li><a href="#">Discussion</a></li>
                         <li><a href="#">Library</a></li>
                     </ul>
-            </li>
+                </li>
                 <li><a href="#">Clubs</a></li>
                 <!-- DROP DOWN MENU OF ALL CLUBS YOU ARE IN (link goes to their page) -->
 
