@@ -5,66 +5,24 @@
 	</head>
 
 	<body>
-        <script>
-          window.fbAsyncInit = function() {
-            FB.init({
-              appId      : '446543105502907',
-              xfbml      : true,
-              version    : 'v2.2',
-              status     : true
-            });
-          
-            FB.ui({
-                 method: 'share_open_graph',
-                 action_type: 'og.likes',
-                 action_properties: JSON.stringify({
-                  object:'https://developers.facebook.com/docs/',
-                })
-            }, function(response){});
-
-            FB.getLoginStatus(function(response) {
-              if (response.status === 'connected') {
-                console.log('Logged in.');
-              }
-              else {
-                FB.login();
-              }
-            });
-            }; 
-
-          (function(d, s, id){
-             var js, fjs = d.getElementsByTagName(s)[0];
-             if (d.getElementById(id)) {return;}
-             js = d.createElement(s); js.id = id;
-             js.src = "//connect.facebook.net/en_US/sdk.js";
-             fjs.parentNode.insertBefore(js, fjs);
-           }(document, 'script', 'facebook-jssdk'));
-        </script>
-		<div id="navigation_bar">
-            
-            <!-- Logo -->
-            <div id="logo">
-                <a class="nav_buttons" href="http://www.google.com"> (>^.^)> </a>
-            </div>
-            
-            <!-- Search Bar -->
-            <div id="search_bar">
-                <input type="text" placeholder="Search..." class="search" required>
-                <input type="button" value="Search" class="button">
-            </div>
-
+        <div class="nav">
             <ul>
-                <li class="filler"></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Classes</a>
-                    <ul>
+                <li><a href="#home">(>^.^)></a></li>
+                <li><div id="search_bar">
+                        <form method="get" action="http://www.mysite.com/search.php">
+                            <input type="text" placeholder="Search..." class="search"required>
+                            <input type="button" value="Search" class="button">
+                        </form>
+                </div></li>
+                <li class="parent"><a href="#about">Classes</a>
+                    <ul class="dropdown">
                         <li><a href="#">Grades</a></li>
                         <li><a href="#">Enrollment</a></li>
                         <li><a href="#">Homework</a></li>
                         <li><a href="#">Discussion</a></li>
                         <li><a href="#">Library</a></li>
                     </ul>
-                </li>
+            </li>
                 <li><a href="#">Clubs</a></li>
                 <!-- DROP DOWN MENU OF ALL CLUBS YOU ARE IN (link goes to their page) -->
 
@@ -73,17 +31,12 @@
                 <!-- DROP DOWN MENU OF ALL SPORTS TEAMS (varsity, club, IM) YOU ARE IN (link goes to their page) -->
 
                 <li><a href="#">Profile</a></li>
+                <li><a href="#">Feedback</a></li>
 
-                <li id="gear"><a style="font-size: 20" href="#">&#9881;</a>
-                    <ul>
-                        <li><a href="#">Settings</a></li>
-                        <li><a href="#">Account</a></li>
-                        <li><a href="#">Feedback</a></li>
-                        <li><a href="#">Logout</a></li>
-                    </ul>
+                <li><a style="font-size: 20" href="#">&#9881;</a>
                 </li>
             </ul>
-		</div>
+        </div>
 
 		<!-- Notifications (aka Action Items) -->		
 		<div class="right_panel top">
@@ -145,19 +98,10 @@
 		<!-- Calendar -->
 		<iframe id="google_cal" src="https://www.google.com/calendar/embed?src=stephenwu95%40gmail.com&ctz=America/Los_Angeles&mode=week" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
-        <!-- Facebook stuff -->
-
-
 		<!-- something1 -->
 		<div class="box1">
-            <h1 class="box_title">something1</h1>
-            <div
-              class="fb-like"
-              data-send="true"
-              data-width="450"
-              data-show-faces="true">
-            </div>
-        </div>
+			<h1 class="box_title"> something1 </h1>
+		</div>
 
 		<!-- something2 -->
 		<div class="box2">
