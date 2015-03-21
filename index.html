@@ -6,58 +6,6 @@
 	</head>
 
 	<body>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-        <script>
-          window.fbAsyncInit = function() {
-            FB.init({
-              appId      : '446543105502907',
-              xfbml      : true,
-              version    : 'v2.2',
-              status     : true
-            });
-          
-            FB.ui({
-                 method: 'share_open_graph',
-                 action_type: 'og.likes',
-                 action_properties: JSON.stringify({
-                  object:'https://developers.facebook.com/docs/',
-                })
-            }, function(response){});
-
-            FB.getLoginStatus(function(response) {
-              if (response.status === 'connected') {
-                console.log('Logged in.');
-              }
-              else {
-                FB.login();
-              }
-            });
-            }; 
-
-          (function(d, s, id){
-             var js, fjs = d.getElementsByTagName(s)[0];
-             if (d.getElementById(id)) {return;}
-             js = d.createElement(s); js.id = id;
-             js.src = "//connect.facebook.net/en_US/sdk.js";
-             fjs.parentNode.insertBefore(js, fjs);
-           }(document, 'script', 'facebook-jssdk'));
-        </script>
-		<div id="navigation_bar">
-            
-            <!-- Logo -->
-            <div id="logo">
-                <a class="nav_buttons" href="http://www.google.com"> (>^.^)> </a>
-            </div>
-            
-            <!-- Search Bar -->
-            <div id="search_bar">
-                <input type="text" placeholder="Search..." class="search" required>
-                <input type="button" value="Search" class="button">
-            </div>
->>>>>>> gh-pages
 
     <!-- Firebase -->
     <script>
@@ -65,7 +13,6 @@
     </script>
 
 
->>>>>>> master
         <div class="nav">
             <ul>
                 <li><a href="#home">(>^.^)></a></li>
@@ -75,15 +22,7 @@
                             <input type="button" value="Search" class="button">
                         </form>
                 </div></li>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <li class="parent"><a href="#about">Classes</a>
-=======
                 <li><a href="#about">Classes</a>
->>>>>>> master
-=======
-                <li class="parent"><a href="#about">Classes</a>
->>>>>>> origin/gh-pages
                     <ul class="dropdown">
                         <li><a href="#">Grades</a></li>
                         <li><a href="#">Enrollment</a></li>
@@ -91,7 +30,7 @@
                         <li><a href="#">Discussion</a></li>
                         <li><a href="#">Library</a></li>
                     </ul>
-            </li>
+                </li>
                 <li><a href="#">Clubs</a></li>
                 <!-- DROP DOWN MENU OF ALL CLUBS YOU ARE IN (link goes to their page) -->
 

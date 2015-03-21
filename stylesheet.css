@@ -40,35 +40,14 @@ td:hover {
 .nav a {
     display: block;
     text-transform:uppercase;
-<<<<<<< HEAD
-    font-size: 1em;
-    color: rgb(56,56,56);
-=======
     font-size: .95em;
-<<<<<<< HEAD
     color: #FFFFFF;
->>>>>>> master
-=======
-    color: rgb(56,56,56);
->>>>>>> origin/gh-pages
     text-decoration: none;
     padding: 0.2em 0.2em 0.2em 0.2em;
     text-shadow: 0px 1px 0px #63d0ff;
 }
 .nav > ul > li:hover > a{
-<<<<<<< HEAD
-<<<<<<< HEAD
-    color: rgb(87,183,223);
-    text-shadow: 0px 1px 0px #050505;
-    background: rgb(56,56,56);
-=======
     background: #2288BB;
->>>>>>> master
-=======
-    color: rgb(87,183,223);
-    text-shadow: 0px 1px 0px #050505;
-    background: rgb(56,56,56);
->>>>>>> origin/gh-pages
 }
 .nav > ul > li:first-child:hover a{
     -webkit-border-radius: 3px 0 0 3px;
@@ -95,15 +74,7 @@ td:hover {
     -webkit-box-shadow: 0px 1px 0px 0px #cccccc;
     -moz-box-shadow: 0px 1px 0px 0px #cccccc;
     box-shadow: 0px 1px 0px 0px #cccccc;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    background: rgb(56,56,56);
-=======
     background: #2288BB;
->>>>>>> master
-=======
-    background: rgb(56,56,56);
->>>>>>> origin/gh-pages
         -webkit-transition: all .24s ease;
         -moz-transition: all .24s ease;
         -ms-transition: all .24s ease;
@@ -125,32 +96,14 @@ td:hover {
     display: block;
     padding: 0.6em 0.2em 0.6em 0.2em;
     text-transform:uppercase;
-<<<<<<< HEAD
-    font-size: .9em;
-    word-spacing: 0.3em;
-    white-space:nowrap;
-    color: rgb(87,183,223);
-    text-shadow: 0px 1px 0px #050505;
-}
-.dropdown li:hover a{
-    color: rgb(56,56,56);
-    text-decoration: none;
-    text-shadow: 0px 1px 0px #63d0ff;
-=======
     font-size: .8em;
     word-spacing: 0.3em;
     white-space:nowrap;
-    color: rgb(87,183,223);
+    color: #FFFFFF;
     text-shadow: 0px 1px 0px #050505;
 }
 .dropdown li:hover a{
-    color: rgb(56,56,56);
     text-decoration: none;
-<<<<<<< HEAD
->>>>>>> master
-=======
-    text-shadow: 0px 1px 0px #63d0ff;
->>>>>>> origin/gh-pages
     background: rgb(87,183,223);
     background: -moz-linear-gradient(top, rgb(87,181,222) 0%, rgb(87,183,223) 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(87,181,222)), color-stop(100%,rgb(87,183,223)));
