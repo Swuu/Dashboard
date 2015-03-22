@@ -1,139 +1,119 @@
-<!DOCTYPE html>
-<!-- saved from url=(0043)http://getbootstrap.com/examples/jumbotron/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="Images/D-square.JPG">
+<html>
+	<head>
+		<title> Home Page </title>
+        <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+        <script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
+	</head>
 
-    <title>Dashboard</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="stylesheet.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="./Jumbotron Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
+	<body>
 
     <!-- Firebase -->
     <script>
         var myDataRef = new Firebase('http://cmuscheduling.firebaseio.com');
     </script>
 
-    <!-- Facebook -->
-    <script>
-          window.fbAsyncInit = function() {
-            FB.init({
-              appId      : '446543105502907',
-              xfbml      : true,
-              version    : 'v2.2',
-              status     : true
-            });
-          
-            FB.ui({
-                 method: 'share_open_graph',
-                 action_type: 'og.likes',
-                 action_properties: JSON.stringify({
-                  object:'https://developers.facebook.com/docs/',
-                })
-            }, function(response){});
 
-            FB.getLoginStatus(function(response) {
-              if (response.status === 'connected') {
-                console.log('Logged in.');
-              }
-              else {
-                FB.login();
-              }
-            });
-            }; 
+        <div class="nav">
+            <ul>
+                <li><a href="#home">(>^.^)></a></li>
+                <li><div id="search_bar">
+                        <form method="get" action="http://www.mysite.com/search.php">
+                            <input type="text" placeholder="Search..." class="search"required>
+                            <input type="button" value="Search" class="button">
+                        </form>
+                </div></li>
+                <li><a href="#about">Classes</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Grades</a></li>
+                        <li><a href="#">Enrollment</a></li>
+                        <li><a href="#">Homework</a></li>
+                        <li><a href="#">Discussion</a></li>
+                        <li><a href="#">Library</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Clubs</a></li>
+                <!-- DROP DOWN MENU OF ALL CLUBS YOU ARE IN (link goes to their page) -->
 
-          (function(d, s, id){
-             var js, fjs = d.getElementsByTagName(s)[0];
-             if (d.getElementById(id)) {return;}
-             js = d.createElement(s); js.id = id;
-             js.src = "//connect.facebook.net/en_US/sdk.js";
-             fjs.parentNode.insertBefore(js, fjs);
-           }(document, 'script', 'facebook-jssdk'));
-    </script>
+                <li><a href="#">Advising</a></li>
+                <!-- DROPDOWN TABS: CAREER, ACADEMIC ADVISING, FINANCIAL AID -->
+                <!-- DROP DOWN MENU OF ALL SPORTS TEAMS (varsity, club, IM) YOU ARE IN (link goes to their page) -->
 
-  <body gram_dict="true">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Feedback</a></li>
 
-<!-- Navigation Bar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#"><img src="Images/D-roundsquare inverse.JPG" width="30px" height="30px"></a>
-        </div>
-
-        <div class="navbar-right">
-          <a href="#">Contact Us</a>
-        </div>
-
-        <div class="navbar-right">
-          <a href="#">Settings</a>
-        </div>
-
-        <div class="navbar-right">
-          <a href="#">Advising</a>
-        </div>
-
-        <div class="navbar-right">
-          <a href="#">Clubs</a>
-        </div>
-
-        <div class="navbar-right">
-          <a href="#">Classes</a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Grades</a></li>
-              <li><a href="#">Enrollment</a></li>
-              <li><a href="#">Homework</a></li>
-              <li><a href="#">Discussion</a></li>
-              <li><a href="#">Library</a></li>
+                <li><a style="font-size: 20" href="#">&#9881;</a>
+                </li>
             </ul>
         </div>
 
-        <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-left">
-            <div class="form-group">
-              <input type="password" placeholder="Search Dashboard" class="form-control">
-            </div>
-          </form>
-        </div><!--/.navbar-collapse -->
-      </div>
-    </nav>
+		<!-- Notifications (aka Action Items) -->		
+		<div class="right_panel top">
+       	<table style="border-collapse:collapse;">
+        	<thead>
+                <tr>
+                    <th style="font-size:20">Action-Items</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding:5px; border: 1px solid #D3D3D3"><em>Alex Bai</em> invites you to <strong>ASA social</strong> on Tuesday<a style="color: green"> Accept </a> / <a style="color: red"> Ignore </a></td>   
+                </tr>
+                
+                <tr>
+                    <td style="padding:5px; border: 1px solid #D3D3D3"><a style="color: orange"><strong>Econ hw 05</strong></a> due tomorrow, and you havent started yet</td>
+                </tr>
+                
+                <tr>
+                    <td style="padding:5px; border: 1px solid #D3D3D3">AKPsi superlatives <strong>survey</strong> available</td>
+                </tr>
+                <tr>
+                    <td style="padding:5px; border: 1px solid #D3D3D3"><em>Charles Wang</em> requests to borrow your econ notes <a style="color: green"> Accept </a> / <a style="color: red"> Ignore </a> </td>
+                </tr>
+            </tbody>
+        </table>
+		</div>
 
-<!-- main box -->
-<div class="row">
-  <div class="col-md-10">
-    <!-- Calendar -->
-    <iframe id="google_cal" src="https://www.google.com/calendar/embed?src=stephenwu95%40gmail.com&ctz=America/Los_Angeles&mode=week" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+		<!-- Announcements -->
+		<div class="right_panel bot">
+       	<table style="border-collapse:collapse;">
+        	<thead>
+                <tr>
+                    <th style="font-size:20">Notifications</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td style="padding:5px; border: 1px solid #D3D3D3">36-201 Statistics midterm result: <strong>97.3%</strong></td>
+                </tr>
+                
+                <tr>
+                    <td style="padding:5px; border: 1px solid #D3D3D3"><em>Alan Guo</em> <strong>commented</strong> on your course "dude, I'm taking that class too! Let's study together sometime."</td>
+                </tr>
 
-    <div class="row">
-      <div class="col-md-12"></div>
-      <div class="fb-like"
-      data-send="true"
-      data-width="450"
-      data-show-faces="true"></div>
-    </div>
-  </div>
+                <tr>
+                    <td style="padding:5px; border: 1px solid #D3D3D3"><em>Alan Guo</em> <strong>liked</strong> that you added <a style="color: #0066FF">15-122 Imperative Programming</a></td>
+                </tr>
 
-<!-- right panel -->
-  <div class="col-md-2" id="right-panel">
-    <div class="row"><div class="col-md-12" id="inner-panel">Action Items</div></div>
-    <div class="row"><div class="col-md-12" id="inner-panel">Notifications</div></div>
-  </div>
-</div>
+                <tr>
+                    <td style="padding:5px; border: 1px solid #D3D3D3"><strong>Course added:</strong> <a style="color: #0066FF">15-122 Imperative Programming</a> (color coded blue coz for the CS major)</td>
+                </tr>
+            </tbody>
+        </table>
+
+		</div>
+
+		<!-- Calendar -->
+		<iframe id="google_cal" src="https://www.google.com/calendar/embed?src=stephenwu95%40gmail.com&ctz=America/Los_Angeles&mode=week" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+		<!-- something1 -->
+		<div class="box1">
+			<h1 class="box_title"> something1 </h1>
+		</div>
+
+		<!-- something2 -->
+		<div class="box2">
+			<h1 class="box_title"> something2 </h1>
+		</div>
+	</body>
+</html>
