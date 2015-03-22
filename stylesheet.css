@@ -1938,6 +1938,11 @@ pre code {
     width: 100%;
   }
 
+  #fb-like {
+    text-align: center;
+    right: 50%;
+  }
+
   .col-md-11 {
     width: 91.66666667%;
   }
@@ -1996,6 +2001,7 @@ pre code {
   .col-md-1 {
     width: 8.33333333%;
   }
+
   .col-md-pull-12 {
     right: 100%;
   }
