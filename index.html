@@ -11,6 +11,9 @@
 
     <title>Dashboard</title>
 
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
     <!-- Bootstrap core CSS -->
     <link href="stylesheet.css" rel="stylesheet">
 
@@ -73,30 +76,21 @@
   <body gram_dict="true">
 
 <!-- Navigation Bar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="#"><img src="Images/D-roundsquare-inverse.jpg" width="30px" height="30px"></a>
         </div>
 
-        <div class="navbar-right">
-          <a href="#">Contact Us</a>
-        </div>
+        <div class="navbar-right"><a href="#">Contact Us</a></div>
 
-        <div class="navbar-right">
-          <a href="#">Settings</a>
-        </div>
+        <div class="navbar-right"><a href="#">Settings</a></div>
 
-        <div class="navbar-right">
-          <a href="#">Advising</a>
-        </div>
+        <div class="navbar-right"><a href="#">Advising</a></div>
 
-        <div class="navbar-right">
-          <a href="#">Clubs</a>
-        </div>
+        <div class="navbar-right"><a href="#">Clubs</a></div>
 
-        <div class="navbar-right">
-          <a href="#">Classes</a>
+        <div class="navbar-right dropdown"><a href="#" >Classes</a>
             <ul class="dropdown-menu">
               <li><a href="#">Grades</a></li>
               <li><a href="#">Enrollment</a></li>
@@ -107,9 +101,9 @@
         </div>
 
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-left">
+          <form class="navbar-left" id="searchbar">
             <div class="form-group">
-              <input type="password" placeholder="Search Dashboard" class="form-control">
+              <input placeholder="Search Dashboard" class="form-control">
             </div>
           </form>
         </div><!--/.navbar-collapse -->
