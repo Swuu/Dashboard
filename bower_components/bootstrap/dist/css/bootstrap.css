@@ -4390,6 +4390,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: rgb(87,183,223);
 }
 
+#icon-white {
+  color: #fff;
+}
+
+#icon-white:hover {
+  color: rgb(87,183,223);
+}
+
 .navbar-default .navbar-brand {
   color: #777;
 }
