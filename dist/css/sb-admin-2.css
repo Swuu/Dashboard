@@ -29,6 +29,7 @@ body {
 
 .navbar-top-links {
     margin-right: 0;
+    background-color: rgb(87,183,223);
 }
 
 .navbar-top-links li {
@@ -46,6 +47,7 @@ body {
 
 .navbar-top-links .dropdown-menu li {
     display: block;
+    background-color: 
 }
 
 .navbar-top-links .dropdown-menu li:last-child {
