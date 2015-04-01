@@ -4387,7 +4387,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 
 #navbar-blue {
-  background-color: rgb(87,183,223);
+  background-color: rgb(87,183,223);    /* red */
+  /*background-color: rgb(196,18,48);*/ /* blue */
 }
 
 #icon-white {
