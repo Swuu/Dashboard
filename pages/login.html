@@ -147,7 +147,7 @@
                 </div>
                 <button type="submit" class="btn btn-success" id="adjust-left">Log In</button>
               </form>
-              <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+              
             </div><!--/.navbar-collapse -->
         </nav>
 <div id="status">
@@ -162,8 +162,10 @@
           class="fb-like"
           data-share="true"
           data-width="450"
-          data-show-faces="true">Like Us Here!
+          data-show-faces="true">
         </div>
+        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+        <div id="fb-root"></div>
       </div>
     </div>
 
