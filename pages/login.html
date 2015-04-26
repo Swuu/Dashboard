@@ -58,17 +58,16 @@
       usersRef.set({
           name: response.name,
           last_access: curdate,
-          email: response.email,
-          fb_access_token: resp.authResponse.accessToken
+          email: response.email
       });
-      console.log('Firebase hopefully updated');
     }
+    console.log('Firebase hopefully updated');
   }
 
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
-    connectFirebase(response);
+    connectFirebase();
     // The response object is returned with a status field that lets the
     // app know the current login status of the person.
     // Full docs on the response object can be found in the documentation
