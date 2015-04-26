@@ -47,17 +47,22 @@
   <body gram_dict="true">
   <script>
   // This is called with the results from from FB.getLoginStatus().
-  function connectFirebase(resp) {
-    var username = resp.authResponse.userID;
-    var dataReference = "https://cmuscheduling.firebaseio.com/";
-    var myDataRef = new Firebase(dataReference);
-    var usersRef = myDataRef.child("users");
-    usersRef.set({
-      name: resp.name,
-      last_access: new Date(year, month, day, hours, minutes, seconds, milliseconds),
-      fb_access_token: resp.authResponse.accessToken
-    });
-    console.log('Firebase hopefully updated');
+  function connectFirebase() {
+    FB.api('/me', function(response) {
+      var username = response.id;
+      var dataReference = "https://cmuscheduling.firebaseio.com/";
+      var myDataRef = new Firebase(dataReference);
+      var usersRefa = myDataRef.child("users");
+      var usersRef = usersRefa.child(username);
+      var curdate = (new Date()).toISOString().slice(0,10).replace(/-/g,"");
+      usersRef.set({
+          name: response.name,
+          last_access: curdate,
+          email: response.email,
+          fb_access_token: resp.authResponse.accessToken
+      });
+      console.log('Firebase hopefully updated');
+    }
   }
 
   function statusChangeCallback(response) {
