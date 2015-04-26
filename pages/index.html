@@ -694,6 +694,49 @@
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
 
+    <!-- Firebase -->
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+   
+    <script>
+    var username = "kzy";
+    var dataReference = "https://cmuscheduling.firebaseio.com/chat/";
+    var concat = dataReference.concat(username);
+    var myDataRef = new Firebase(concat); 
+    
+
+    $('#btn-input').keypress(function (e) {
+        if (e.keyCode == 13) {
+          var d = new Date();
+          var message = $('#btn-input').val();
+          //var currentTime = String(d.getHour)
+          myDataRef.push({name: username, text: message, time: d.getTime()});
+          $('#btn-input').val("");
+          var htmlString = '<li class="left clearfix"><span class="chat-img pull-left">';
+          htmlString = htmlString.concat('<img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar" class="img-circle"/></span>');
+          htmlString = htmlString.concat('<div class="chat-body clearfix"><div class="header"><strong class="primary-font">');
+          htmlString = htmlString.concat(username, '</strong><small class="pull-right text-muted"><i class="fa fa-clock-o fa-fw"></i>',
+                                               d.getTime(), '</small></div><p>', message,
+                                               '</p></div></li>');
+          $('.chat').append(htmlString);
+        }
+    });
+
+    $('#btn-chat').click(function() {
+        var message = $('#btn-input').val();
+        var d = new Date();
+        myDataRef.push({name: username, text: message, time: d.getTime()});
+        $('#btn-input').val("");
+        var htmlString = '<li class="left clearfix"><span class="chat-img pull-left">';
+        htmlString = htmlString.concat('<img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar" class="img-circle"/></span>');
+        htmlString = htmlString.concat('<div class="chat-body clearfix"><div class="header"><strong class="primary-font">');
+        htmlString = htmlString.concat(username, '</strong><small class="pull-right text-muted"><i class="fa fa-clock-o fa-fw"></i>',
+                                           d.getTime(), '</small></div><p>', message,
+                                           '</p></div></li>');
+        $('.chat').append(htmlString);
+    });
+
+    </script>
+
 </body>
 
 </html>
